@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-12-19 10:21:02 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="false" >
+    <class catalog="ssh18" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Relationship1" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="relationship_1">
+        <id name="userRoleId" type="java.lang.Integer">
+            <column name="userRole_id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.woniu.pojo.Role" embed-xml="true" fetch="select" insert="true" name="role" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="role_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.woniu.pojo.User" embed-xml="true" fetch="select" insert="true" name="user" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="user_id" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

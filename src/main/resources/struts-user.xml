@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="user" extends="struts-default">
+		<action name="login" class="com.woniu.action.UserAction" method="login">
+			
+			<!-- 返回到学生主界面 -->
+			<result type="redirect">/student.jsp</result>
+			
+			<!-- 返回到班主任主界面 -->
+			<result name="overman" type="redirect">/overman.jsp</result>
+			
+			<!-- 返回到老师主界面 -->
+			<result name="teacher" type="redirect">/teacher.jsp</result>
+			
+			<!-- 返回到教学主管主界面 -->
+			<result name="teacherBoss" type="redirect">/teacherBoss.jsp</result>
+			
+			<!-- 密码帐号错误，返回登陆界面 -->
+			<result name="login">/login.jsp</result>
+		</action>
+		<action name="save" class="com.woniu.action.UserAction" method="save">
+			<result name="login">/login.jsp</result>
+			<result type="redirect">/index.jsp</result>
+		</action>
+	</package>
+</struts>
