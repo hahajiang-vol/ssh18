@@ -43,7 +43,7 @@
                  </a>
                  <ul class="dropdown-menu">
                      <li>
-                         <a href="nav1.html" target="mainFrame">修改密码</a>
+                         <a href="stuPwdUpd.action" target="mainFrame">修改密码</a>
                      </li>
                      <li>
                          <a href="stuInfo.jsp" target="mainFrame">查看个人信息</a>
@@ -58,7 +58,7 @@
 
      <div class="splitter"></div>
      <div class="pageContent">
-       <iframe src="scoresFindAllByStuId.action" id="mainFrame" name="mainFrame" 
+       <iframe src="stuInfo.jsp" id="mainFrame" name="mainFrame" 
        	frameborder="0" width="100%"  height="100%" frameBorder="0">
        </iframe> 
      </div>
