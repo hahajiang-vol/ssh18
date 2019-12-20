@@ -70,6 +70,7 @@
   		<groupId>javax.servlet</groupId>
   		<artifactId>jstl</artifactId>
   		<version>1.2</version>
+  		
   	</dependency>
   	<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-spring-plugin -->
 	<dependency>

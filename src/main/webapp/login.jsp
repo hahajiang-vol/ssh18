@@ -23,8 +23,7 @@
 					密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="user.userPwd" />
 				</div>
 				<div style="margin-top: 10px;">
-					<input type="submit" value="登录"/>
-					
+					<input type="submit" value="登录"/>					
 				</div>
 			</form>
 		</div>

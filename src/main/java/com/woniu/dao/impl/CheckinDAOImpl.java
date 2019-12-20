@@ -12,7 +12,8 @@ import com.woniu.pojo.Checkin;
 public class CheckinDAOImpl implements ICheckinDAO {
 
 	@Autowired
-	SessionFactory sessionFactory;
+	SessionFactory sessionFactory;	
+	
 	
 	@Override
 	public Checkin findOneByStudentId(Integer studentid) {

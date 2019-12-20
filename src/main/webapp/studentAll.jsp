@@ -13,6 +13,7 @@
 	<body>
 		<table class="table table-striped">
 		  <caption><font color="#2B669A" size="5">当前班级管理</font></caption>
+		  
 		  <thead>
 		    <tr>
 		      <th>序号</th>
@@ -43,10 +44,13 @@
 		      <th>${stu.studentProfessional }</th>
 		      <th>${stu.studentGraduateTime }</th>
 		      <th>${stu.clazz.clazzName }</th>
-		      <th>操作</th>
+		      <th><a href="addClass.html" class="btn btn-primary btn-xs active" role="button">转班</a></th>
+		      
 		    </tr>
 		    </c:forEach>
+		    <div><a href="addClass.html" class="btn btn-primary btn-xs active" role="button">转班</a></div>
 		  </tbody>
+		   
 		</table>
 	</body>
 </html>

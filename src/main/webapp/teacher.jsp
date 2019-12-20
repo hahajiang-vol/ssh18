@@ -31,7 +31,7 @@
      <div class="pageSidebar">
          <ul class="nav nav-stacked nav-pills">
              <li role="presentation">
-                 <a href="showClass.html" target="mainFrame" >班级管理</a>
+                 <a href="studentFindAll.action" target="mainFrame" >班级管理</a>
              </li>
              <li role="presentation">
                  <a href="showStudent.html" target="mainFrame">班主任管理</a>
