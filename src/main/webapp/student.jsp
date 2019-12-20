@@ -31,7 +31,7 @@
      <div class="pageSidebar">
          <ul class="nav nav-stacked nav-pills">
              <li role="presentation">
-                 <a href="showClass.html" target="mainFrame" >考试信息</a>
+                 <a href="scoresFindAllByStuId.action" target="mainFrame" >考试信息</a>
              </li>
              <li role="presentation">
                  <a href="showStudent.html" target="mainFrame">考勤信息</a>
@@ -58,7 +58,7 @@
 
      <div class="splitter"></div>
      <div class="pageContent">
-       <iframe src="welcome.jsp" id="mainFrame" name="mainFrame" 
+       <iframe src="scoresFindAllByStuId.action" id="mainFrame" name="mainFrame" 
        	frameborder="0" width="100%"  height="100%" frameBorder="0">
        </iframe> 
      </div>

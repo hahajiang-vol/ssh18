@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generated 2019-12-19 10:21:02 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="false">
     <class catalog="ssh18" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Score" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="score">
         <id name="scoreId" type="java.lang.Integer">
             <column name="score_id"/>

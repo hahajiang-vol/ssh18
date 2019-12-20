@@ -17,7 +17,7 @@
 	<body>
 		<h3 style="text-align: center;">阶段考试成绩</h3>
 		<table class="table table-striped" style="width: 80%;margin: 0px auto;">
-			<c:forEach items="user.student.scores" var="sc">
+			<c:forEach items="${scores }" var="sc">
 				<tr>
 					<th>姓名：${sc.scoreDate }</th>
 					<th>学号：${sc.scoreNum }</th>

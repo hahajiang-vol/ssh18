@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="score" extends="struts-default">
+		
+		<action name="scoresFindAllByStuId" class="com.woniu.action.ScoreAction" method="scoresFindAllByStuId">			
+			<!-- 密码帐号错误，返回登陆界面 -->
+			<result>/stuScore.jsp</result>
+		</action>
+		
+	</package>
+</struts>
