@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<struts>
+		<package name="student"  extends="struts-default">
+		
+			<global-results >
+			<result type="redirect">studentFindAll.action</result>
+			</global-results>
+			
+			<!-- <action name="studentSave" class="com.woniu.StudentAction" method="studentSave">
+			</action>
+			
+			<action name="studentUpdate" class="com.woniu.StudentAction" method="studentUpdate">
+				<result name="studentUpdate"></result>
+			</action> -->
+			
+			<action name="studentFindAll" class="com.woniu.action.StudentAction" method="studentFindAll">
+				<result  name="list" type="dispatcher">/studentAll.jsp</result>
+			</action>
+		</package>
+	
+	</struts>
