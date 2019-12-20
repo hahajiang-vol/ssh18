@@ -6,6 +6,7 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.woniu.pojo.Student;
 import com.woniu.pojo.User;
 
 @Controller
@@ -24,7 +25,10 @@ public class ScoreAction extends ActionSupport {
 
 	public String scoresFindAllByStuId() {
 		User user = (User) ServletActionContext.getRequest().getSession().getAttribute("loginUser");
-		System.out.println(user.getStudent());
+		/*
+		 * Set<Student> set = user.getStudents(); for (Student stu : set) { scores =
+		 * stu.getScores(); }
+		 */
 		scores = user.getStudent().getScores();
 		return SUCCESS;
 	}

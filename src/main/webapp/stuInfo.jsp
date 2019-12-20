@@ -17,25 +17,25 @@
 		<h3 style="text-align: center;">学生个人信息</h3>
 		<table class="table table-striped" style="width: 80%;margin: 0px auto;">
 			<tr>
-				<th>姓名：${user.student.studentName }</th>
-				<th>学号：${user.student.sutdentCode }</th>
+				<th>姓名：${loginUser.student.studentName }</th>
+				<th>学号：${loginUser.student.sutdentCode }</th>
 			</tr>
 			<tr>
-				<th>性别：${user.student.studentSex }</th>
-				<th>联系方式：${user.student.studentPhone }</th>
+				<th>性别：${loginUser.student.studentSex }</th>
+				<th>联系方式：${loginUser.student.studentPhone }</th>
 			</tr>
 			<tr>
-				<th colspan="2">地址：${user.student.studentAddress }</th>
+				<th colspan="2">地址：${loginUser.student.studentAddress }</th>
 			</tr>
 			<tr>
-				<th>学校：${user.student.studentCollege }</th>
-				<th>学历：${user.student.studentEdu }</th>
+				<th>学校：${loginUser.student.studentCollege }</th>
+				<th>学历：${loginUser.student.studentEdu }</th>
 			</tr>
 			<tr>
-				<th colspan="2">专业：${user.student.studentProfessional }</th>
+				<th colspan="2">专业：${loginUser.student.studentProfessional }</th>
 			</tr>
 			<tr>
-				<th colspan="2">毕业时间：${user.student.studentGraduateTime }</th>
+				<th colspan="2">毕业时间：${loginUser.student.studentGraduateTime }</th>
 			</tr>
 			
 		</table>

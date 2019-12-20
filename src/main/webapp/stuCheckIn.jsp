@@ -17,10 +17,16 @@
 	<body>
 		<h3 style="text-align: center;">个人考勤信息</h3>
 		<table class="table table-striped" style="width: 80%;margin: 0px auto;">
-			<c:forEach items="user.student.checkins" var="ch">
+			<tr>
+				<th>序号</th>
+				<th>日期</th>
+				<th>考勤</th>
+			</tr>
+			<c:forEach items="${loginUser.student.checkins }" var="ch" varStatus="i">
 				<tr>
-					<th>姓名：${ch.checkInDate }</th>
-					<th>学号：${ch.checkintype }</th>
+					<th>${i.count}</th>
+					<th>${ch.checkInDate }</th>
+					<th>${ch.checkintype.checkInTypeName }</th>
 				</tr>
 			</c:forEach>
 			

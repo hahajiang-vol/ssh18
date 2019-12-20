@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generated 2019-12-19 10:21:02 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="false">
     <class catalog="ssh18" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Clazz" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="clazz">
         <id name="clazzId" type="java.lang.Integer">
             <column name="clazz_id"/>
@@ -21,7 +21,7 @@
         <property generated="never" lazy="false" name="clazzType" optimistic-lock="true" type="string" unique="false">
             <column length="20" name="clazz_type"/>
         </property>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="students" optimistic-lock="true" sort="unsorted" table="student">
+        <set embed-xml="true" fetch="select" inverse="true" lazy="false" mutable="true" name="students" optimistic-lock="true" sort="unsorted" table="student">
             <key on-delete="noaction">
                 <column name="clazz_id"/>
             </key>

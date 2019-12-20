@@ -12,12 +12,12 @@
 		<nav class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid">
 		        <div class="navbar-header">
-		            <a class="navbar-brand" title="logoTitle" href="#">代课老师</a>
+		            <a class="navbar-brand" title="logoTitle" href="#">学员</a>
 		       </div>
 		       <div class="collapse navbar-collapse">
 		           <ul class="nav navbar-nav navbar-right">
 		               <li role="presentation">
-		                   <a href="#">当前用户：<span class="badge">xxx</span></a>
+		                   <a href="#">当前用户：<span class="badge">${sessionScope.loginUser.userName }</span></a>
 		               </li>
 		               <li>
 		                   <a href="#">
@@ -34,7 +34,7 @@
                  <a href="scoresFindAllByStuId.action" target="mainFrame" >考试信息</a>
              </li>
              <li role="presentation">
-                 <a href="showStudent.html" target="mainFrame">考勤信息</a>
+                 <a href="stuCheckIn.jsp" target="mainFrame">考勤信息</a>
              </li>
            
              <li class="dropdown">
@@ -46,7 +46,7 @@
                          <a href="nav1.html" target="mainFrame">修改密码</a>
                      </li>
                      <li>
-                         <a href="nav3.html" target="mainFrame">查看个人信息</a>
+                         <a href="stuInfo.jsp" target="mainFrame">查看个人信息</a>
                      </li>
                  </ul>
              </li>

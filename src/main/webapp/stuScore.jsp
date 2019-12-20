@@ -17,10 +17,16 @@
 	<body>
 		<h3 style="text-align: center;">阶段考试成绩</h3>
 		<table class="table table-striped" style="width: 80%;margin: 0px auto;">
-			<c:forEach items="${scores }" var="sc">
+			<tr>
+				<th>序号</th>
+				<th>日期</th>
+				<th>成绩</th>
+			</tr>
+			<c:forEach items="${scores }" var="sc" varStatus="i"> 
 				<tr>
-					<th>姓名：${sc.scoreDate }</th>
-					<th>学号：${sc.scoreNum }</th>
+					<th>${i.count }</th>
+					<th>${sc.scoreDate }</th>
+					<th>${sc.scoreNum }</th>
 				</tr>
 			</c:forEach>
 		</table>
