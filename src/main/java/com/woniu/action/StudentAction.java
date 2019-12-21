@@ -58,10 +58,14 @@ public class StudentAction {
 	}
 	
 	
-	/*
-	 * public String studentUpdate() { studentService.update(st); return
-	 * "studentUpdate"; }
-	 */
+	
+	  public String studentUpdate() { 
+		  studentService.update(st);
+	
+		  return "studentUpdate"; 
+	  
+	}
+	 
 	public String studentFindAll() {
 		User user = (User) ServletActionContext.getRequest().getSession().getAttribute("loginUser");	
 		
