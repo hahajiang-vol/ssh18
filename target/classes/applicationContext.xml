@@ -17,7 +17,7 @@
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
 		<property name="url" value="jdbc:mysql://localhost:3306/ssh18?characterEncoding=utf8"></property>
 		<property name="username" value="root"></property>
-		<property name="password" value="root"></property>
+		<property name="password" value="123456"></property>
 
 
 	</bean>

@@ -1,5 +1,6 @@
 package com.woniu.action;
 
+import java.util.List;
 import java.util.Set;
 
 import org.apache.struts2.ServletActionContext;
@@ -19,57 +20,43 @@ public class StudentAction {
 	private IStudentService studentService;
 	private Overman  sh;
 	private Student st;
-	private Set<Student> sts;
+	private List<Student> sts;
 
 
 
 	public IStudentService getStudentService() {
 		return studentService;
 	}
-
-
-
 	public void setStudentService(IStudentService studentService) {
 		this.studentService = studentService;
 	}
-
-
 	public Overman getSh() {
 		return sh;
 	}
-
-
-
 	public void setSh(Overman sh) {
 		this.sh = sh;
 	}
-
-
-
 	public Student getSt() {
 		return st;
 	}
-
-
-
 	public void setSt(Student st) {
 		this.st = st;
 	}
-
-
-
-	public Set<Student> getSts() {
+	public List<Student> getSts() {
 		return sts;
 	}
 
 
 
-	public void setSts(Set<Student> sts) {
+	public void setSts(List<Student> sts) {
 		this.sts = sts;
 	}
 
-	public void studentSave() {
+	public String studentSave() {
 		
+		studentService.save(st);
+		
+		return "studentSave";
 	}
 
 	public String studentFindAll() {
@@ -78,12 +65,10 @@ public class StudentAction {
 		Overman teacher = user.getOverman();
 		
 		Set<Clazz> clazzs = teacher.getClazzs();
-		System.out.println(clazzs);
 		
 		for (Clazz clazz : clazzs) {
 			
-			sts = clazz.getStudents();
-			System.out.println("sts"+sts);
+			sts = studentService.findAllByClazzId(clazz.getClazzId());
 		}
 		return "list";
 
