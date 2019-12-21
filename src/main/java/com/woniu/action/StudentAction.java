@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import com.woniu.pojo.Clazz;
 import com.woniu.pojo.Overman;
 import com.woniu.pojo.Student;
-import com.woniu.pojo.Teacher;
 import com.woniu.pojo.User;
 import com.woniu.service.IStudentService;
 

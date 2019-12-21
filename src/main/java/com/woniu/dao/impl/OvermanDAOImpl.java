@@ -1,6 +1,8 @@
 package com.woniu.dao.impl;
 
-
+/*
+ * °àÖ÷ÈÎ
+ */
 import java.util.List;
 
 import org.hibernate.SessionFactory;
