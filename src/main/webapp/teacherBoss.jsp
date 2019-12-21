@@ -31,7 +31,11 @@
      <div class="pageSidebar">
          <ul class="nav nav-stacked nav-pills">
              <li role="presentation">
+<<<<<<< HEAD
                  <a href="teacherBoss22.jsp" target="mainFrame" >班级管理</a>
+=======
+                 <a href="clazzAll.action" target="mainFrame" >班级管理</a>
+>>>>>>> branch 'master' of https://github.com/hahajiang-vol/ssh18.git
              </li>
              <li role="presentation">
                  <a href="#" target="mainFrame">班主任管理</a>

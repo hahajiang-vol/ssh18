@@ -50,4 +50,10 @@ public class ClazzDAOImpl implements IClazzDAO {
 		return clazz!=null?clazz:null;
 	}
 
+	@Override
+	public Clazz findOneById(Integer clazzid) {
+		Clazz clazz = (Clazz)sessionFactory.getCurrentSession().createQuery("from Clazz where clazz_id = "+ clazzid).list().get(0);
+		return clazz!=null?clazz:null;
+	}
+
 }

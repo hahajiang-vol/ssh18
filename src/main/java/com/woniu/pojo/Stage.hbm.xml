@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generated 2019-12-19 10:21:02 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="false">
     <class catalog="ssh18" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Stage" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="stage">
         <id name="stageId" type="java.lang.Integer">
             <column name="stage_id"/>
@@ -12,7 +12,7 @@
         <property generated="never" lazy="false" name="stageWeek" optimistic-lock="true" type="java.lang.Integer" unique="false">
             <column name="stage_week"/>
         </property>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="clazzs" optimistic-lock="true" sort="unsorted" table="clazz">
+        <set embed-xml="true" fetch="select" inverse="true" lazy="false" mutable="true" name="clazzs" optimistic-lock="true" sort="unsorted" table="clazz">
             <key on-delete="noaction">
                 <column name="stage_id"/>
             </key>
