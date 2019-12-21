@@ -12,15 +12,15 @@
 		<nav class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid">
 		        <div class="navbar-header">
-		            <a class="navbar-brand" title="logoTitle" href="#">教学主管</a>
+		            <a class="navbar-brand" title="logoTitle" href="#">代课老师</a>
 		       </div>
 		       <div class="collapse navbar-collapse">
 		           <ul class="nav navbar-nav navbar-right">
 		               <li role="presentation">
-		                   <a href="#">当前用户：<span class="badge">xxx</span></a>
+		                   <a href="#">当前用户：<span class="badge">${loginUser.userName }</span></a>
 		               </li>
 		               <li>
-		                   <a href="#">
+		                   <a href="login.jsp">
 		                         <span class="glyphicon glyphicon-lock"></span>退出登录</a>
 		                </li>
 		            </ul>
@@ -31,11 +31,9 @@
      <div class="pageSidebar">
          <ul class="nav nav-stacked nav-pills">
              <li role="presentation">
-                 <a href="showClass.html" target="mainFrame" >班级管理</a>
+                 <a href="checkinFindAllByClassId.action" target="mainFrame" >班级考勤</a>
              </li>
-             <li role="presentation">
-                 <a href="showStudent.html" target="mainFrame">班主任管理</a>
-             </li>
+             
              <li role="presentation">
                  <a href="#" target="mainFrame">教师管理</a>
              </li>
@@ -57,10 +55,14 @@
              </li>
          </ul>
      </div>
+     <div class="splitter"></div>
+	     <div class="pageContent">
+	       <iframe src="checkinFindAllByClassId.action" id="mainFrame" name="mainFrame" width="100%"  height="100%" >
+	       </iframe> 
+	     </div>
 
-     
-
-</div>
+	</div>
+  
  <div class="footer">
      <p class="text-center">
          &copy;版权所有
