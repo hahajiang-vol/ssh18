@@ -11,9 +11,10 @@
 				 <result name="studentSave" type="redirectAction">studentFindAll.action</result> 
 			</action> 
 			
-			<!-- <action name="studentUpdate" class="com.woniu.action.StudentAction" method="studentUpdate">
+			 <action name="studentUpdate" class="com.woniu.action.StudentAction" method="studentUpdate">
 				
-			</action>   -->
+			</action>
+			
 			
 			<action name="studentFindAll" class="com.woniu.action.StudentAction" method="studentFindAll">
 				<result  name="list">/studentAll.jsp</result>
