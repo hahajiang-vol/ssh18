@@ -20,6 +20,8 @@ public class User implements java.io.Serializable {
 	private Set overmans = new HashSet(0);
 	private Set teachers = new HashSet(0);
 
+	
+
 	public User() {
 	}
 
@@ -118,9 +120,8 @@ public class User implements java.io.Serializable {
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", overman=" + overman + ", student=" + student + ", teacher=" + teacher
-				+ ", userName=" + userName + ", userPwd=" + userPwd + ", relationship1s=" + relationship1s
-				+ ", students=" + students + ", overmans=" + overmans + ", teachers=" + teachers + "]";
+		return "User [userId=" + userId 
+				+ ", userName=" + userName + ", userPwd=" + userPwd +  "]";
 	}
 	
 	

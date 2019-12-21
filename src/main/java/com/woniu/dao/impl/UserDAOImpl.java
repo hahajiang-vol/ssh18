@@ -15,6 +15,7 @@ public class UserDAOImpl implements IUserDAO {
 	@Override
 	public void save(User obj) {
 		// TODO Auto-generated method stub
+		System.out.println("obj"+obj.getUserName());
 		sessionFactory.getCurrentSession().save(obj);
 
 	}

@@ -5,19 +5,18 @@
 	<struts>
 		<package name="student"  extends="struts-default">
 		
-			<global-results >
-			<result type="redirect">studentFindAll.action</result>
-			</global-results>
 			
-			<!-- <action name="studentSave" class="com.woniu.StudentAction" method="studentSave">
-			</action>
 			
-			<action name="studentUpdate" class="com.woniu.StudentAction" method="studentUpdate">
-				<result name="studentUpdate"></result>
-			</action> -->
+			 <action name="studentSave" class="com.woniu.action.StudentAction" method="studentSave">
+				 <result name="studentSave" type="redirectAction">studentFindAll.action</result> 
+			</action> 
+			
+			<!-- <action name="studentUpdate" class="com.woniu.action.StudentAction" method="studentUpdate">
+				
+			</action>   -->
 			
 			<action name="studentFindAll" class="com.woniu.action.StudentAction" method="studentFindAll">
-				<result  name="list" type="dispatcher">/studentAll.jsp</result>
+				<result  name="list">/studentAll.jsp</result>
 			</action>
 		</package>
 	

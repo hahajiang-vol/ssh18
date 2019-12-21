@@ -48,9 +48,12 @@
 		      
 		    </tr>
 		    </c:forEach>
-		    <div><a href="addClass.html" class="btn btn-primary btn-xs active" role="button">转班</a></div>
-		  </tbody>
-		   
+		  	 <tr>
+		   	 <th colspan="11">
+		   	 <th><a href="studentAdd.jsp" class="btn btn-primary btn-xs active" role="button">增加学生</a></th>
+		   		 </th>
+		  	 </tr>
+		  </tbody>		   
 		</table>
 	</body>
 </html>

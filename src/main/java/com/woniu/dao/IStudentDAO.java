@@ -9,4 +9,5 @@ public interface IStudentDAO {
 	void update(Student obj);
 	List<Student> findAllByClazzId(Integer id);
 	Student findOneByStudentId(Integer id);
+	Student findOneByStudentName(String name);
 }

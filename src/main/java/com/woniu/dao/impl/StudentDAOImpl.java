@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.woniu.dao.IStudentDAO;
 import com.woniu.pojo.Student;
+import com.woniu.pojo.User;
 @Repository
 public class StudentDAOImpl implements IStudentDAO {
 	@Autowired
@@ -34,5 +35,12 @@ public class StudentDAOImpl implements IStudentDAO {
 	public Student findOneByStudentId(Integer studentid) {
 		// TODO Auto-generated method stub
 		return (Student)sessionFactory.getCurrentSession().createQuery("from Student where student_id ="+studentid).list().get(0);
+	}
+
+	@Override
+	public Student findOneByStudentName(String name) {
+		// TODO Auto-generated method stub
+		Student student =(Student)sessionFactory.getCurrentSession().createQuery("from Student where student_name = '" + name+"'").list().get(0);
+		return student!=null?student:null;
 	}
 }
