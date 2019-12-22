@@ -1,5 +1,6 @@
 package com.woniu.action;
 
+import java.io.File;
 import java.util.List;
 import java.util.Set;
 
@@ -18,12 +19,28 @@ public class StudentAction {
 	
 	@Autowired
 	private IStudentService studentService;
+	
 	private Overman  sh;
 	private Student st;
 	private List<Student> sts;
+	
+	private File students;
+	private String studentsFileName;
+	
 
 
-
+	public File getStudents() {
+		return students;
+	}
+	public void setStudents(File students) {
+		this.students = students;
+	}
+	public String getStudentsFileName() {
+		return studentsFileName;
+	}
+	public void setStudentsFileName(String studentsFileName) {
+		this.studentsFileName = studentsFileName;
+	}
 	public IStudentService getStudentService() {
 		return studentService;
 	}
@@ -45,15 +62,21 @@ public class StudentAction {
 	public List<Student> getSts() {
 		return sts;
 	}
-
-
-
 	public void setSts(List<Student> sts) {
 		this.sts = sts;
 	}
+	
 
 	public String studentSave() {
 		
+		studentService.save(st);
+		
+		return "studentSave";
+	}
+	
+	public String studentSaveMany() {
+		
+//		sts = 
 		studentService.save(st);
 		
 		return "studentSave";

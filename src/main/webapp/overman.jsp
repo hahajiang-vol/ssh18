@@ -34,7 +34,7 @@
                  <a href="studentFindAll.action" target="mainFrame" >当前班级管理</a>
              </li>
              <li role="presentation">
-                 <a href="showStudent.html" target="mainFrame">xxxx</a>
+                 <a href="studentAddMany.jsp" target="mainFrame">批量添加</a>
              </li>
              <li role="presentation">
                  <a href="#" target="mainFrame">xxxx</a>
