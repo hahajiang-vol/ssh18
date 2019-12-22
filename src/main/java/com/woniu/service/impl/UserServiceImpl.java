@@ -27,4 +27,10 @@ public class UserServiceImpl implements IUserService {
 		return null;
 	}
 
+	@Override
+	public void update(User obj) {
+		// TODO Auto-generated method stub
+		userDao.update(obj);
+	}
+
 }

@@ -51,4 +51,14 @@ public class UserAction extends ActionSupport  {
 		
 		return SUCCESS;
 	}
+	
+	public String userPwdSave() {
+		user = (User) ServletActionContext.getRequest().getSession().getAttribute("loginUser");
+		
+		user.setUserPwd(ServletActionContext.getRequest().getParameter("newUserPwd"));
+		
+		userService.update(user);
+		
+		return "login";
+	}
 }
