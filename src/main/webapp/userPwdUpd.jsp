@@ -58,7 +58,7 @@
 		//失焦事件，输入提示信息	
 		$("#oldUserPwd").blur(function(){
 				var oldUserPwd = $("#oldUserPwd").val();
-				if (oldUserPwd !=${loginUser.userPwd } ) {
+				if (oldUserPwd != ${loginUser.userPwd } ) {
 					document.getElementById("old").style.color = "red";
 		    		document.getElementById("old").innerHTML = "密码输入不正确";
 				}else{
