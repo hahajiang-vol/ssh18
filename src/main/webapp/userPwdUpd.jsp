@@ -23,7 +23,7 @@
 			</tr>
 			<tr>
 				<th class="one">新&nbsp;&nbsp;密&nbsp;&nbsp;码：</th>
-				<th><input type="password" id="oldUserPwd">&nbsp;&nbsp;<span id="new"></span></th>
+				<th><input type="password" id="newUserPwd">&nbsp;&nbsp;<span id="new"></span></th>
 				
 			</tr>
 			<tr>
@@ -58,24 +58,25 @@
 		//失焦事件，输入提示信息	
 		$("#oldUserPwd").blur(function(){
 				var oldUserPwd = $("#oldUserPwd").val();
-				if (oldUserPwd != ${loginUser.userPwd } ) {
+				var userPwd = ${loginUser.userPwd};
+				if (oldUserPwd != userPwd) {
 					document.getElementById("old").style.color = "red";
-		    		document.getElementById("old").innerHTML = "密码输入不正确";
+					document.getElementById("old").innerHTML = "密码输入错误";
 				}else{
-		    		document.getElementById("old").style.color="green";
-		    		document.getElementById("old").innerHTML = "密码输入正确"; 
-		    	}
+					document.getElementById("old").style.color="green";
+					document.getElementById("old").innerHTML = "密码输入正确"; 
+				}
 			})
 			
 			$("#newUserPwd").blur(function(){
 				var newUserPwd = $("#newUserPwd").val();
 				if(newUserPwd.length < 6) {
-		    		document.getElementById("new").style.color = "red";
-		    		document.getElementById("new").innerHTML = "新密码过于简单，请重新输入";
-		    	}else{
-		    		document.getElementById("new").style.color="green";
-		    		document.getElementById("new").innerHTML = "新密码输入规范"; 
-		    	}
+					document.getElementById("new").style.color = "red";
+					document.getElementById("new").innerHTML = "密码不规范";
+				}else{
+					document.getElementById("new").style.color="green";
+					document.getElementById("new").innerHTML = "密码可用"; 
+				}
 			})
 			
 			$("#newUserPwd2").blur(function(){
@@ -83,10 +84,10 @@
 				var newUserPwd2 = $("#newUserPwd2").val();
 				if (newUserPwd != newUserPwd2 ) {
 					document.getElementById("new2").style.color = "red";
-		    		document.getElementById("new2").innerHTML = "两次密码输入不一致";
+		    		document.getElementById("new2").innerHTML = "密码输入不一致";
 				}else{
 		    		document.getElementById("new2").style.color="green";
-		    		document.getElementById("new2").innerHTML = "新密码输入一致"; 
+		    		document.getElementById("new2").innerHTML = "密码输入一致"; 
 		    	}
 			})
 			
