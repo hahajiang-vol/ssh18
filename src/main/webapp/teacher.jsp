@@ -31,11 +31,7 @@
      <div class="pageSidebar">
          <ul class="nav nav-stacked nav-pills">
              <li role="presentation">
-<<<<<<< HEAD
-                 <a href="studentFindAll.action" target="mainFrame" >班级管理</a>
-=======
-                 <a href="checkinFindAllByClassId.action" target="mainFrame" >班级考勤</a>
->>>>>>> branch 'master' of https://github.com/hahajiang-vol/ssh18.git
+                 <a href="checkinFindAllByClassId.action" target="mainFrame" >班级概况</a>
              </li>
              
              <li role="presentation">
