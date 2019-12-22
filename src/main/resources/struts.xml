@@ -8,5 +8,6 @@
 	<include file="struts-score.xml"></include>
 	<include file="struts-student.xml"></include>
 	<include file="struts-checkin.xml"></include>
-
+	<include file="struts-teacherboss.xml"></include>
+	
 </struts>
