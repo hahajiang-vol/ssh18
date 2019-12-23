@@ -23,7 +23,7 @@
 			</tr>
 			<tr>
 				<th class="one">新&nbsp;&nbsp;密&nbsp;&nbsp;码：</th>
-				<th><input type="password" id="newUserPwd">&nbsp;&nbsp;<span id="new"></span></th>
+				<th><input type="password" id="newUserPwd" name="newUserPwd">&nbsp;&nbsp;<span id="new"></span></th>
 				
 			</tr>
 			<tr>
