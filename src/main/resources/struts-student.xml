@@ -11,6 +11,10 @@
 				 <result name="studentSave" type="redirectAction">studentFindAll.action</result> 
 			</action> 
 			
+			 <action name="studentSaveMany" class="com.woniu.action.StudentAction" method="studentSaveMany">
+				 <result name="studentSave" type="redirectAction">studentFindAll.action</result> 
+			</action> 
+			
 			 <!-- <action name="studentUpdate" class="com.woniu.action.StudentAction" method="studentUpdate">
 				
 			</action> -->

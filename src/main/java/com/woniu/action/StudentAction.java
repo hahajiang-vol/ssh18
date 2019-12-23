@@ -13,6 +13,7 @@ import com.woniu.pojo.Overman;
 import com.woniu.pojo.Student;
 import com.woniu.pojo.User;
 import com.woniu.service.IStudentService;
+import com.woniu.util.StuExcel;
 
 @Controller
 public class StudentAction {
@@ -76,9 +77,15 @@ public class StudentAction {
 	
 	public String studentSaveMany() {
 		
-//		sts = 
-		studentService.save(st);
-		
+		try {
+			sts = StuExcel.readExcel(students);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for (Student student : sts) {
+			studentService.save(student);
+		}		
 		return "studentSave";
 	}
 
