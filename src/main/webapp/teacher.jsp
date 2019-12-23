@@ -43,7 +43,7 @@
                  </a>
                  <ul class="dropdown-menu">
                      <li>
-                         <a href="nav1.html" target="mainFrame">修改密码</a>
+                         <a href="userPwdUpd.jsp" target="mainFrame">修改密码</a>
                      </li>
                      <li>
                          <a href="nav3.html" target="mainFrame">查看个人信息</a>
