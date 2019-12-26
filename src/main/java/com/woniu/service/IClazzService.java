@@ -10,4 +10,5 @@ public interface IClazzService {
 	void save(Clazz Clazzobj);
 	void update(Clazz Clazzobj);
 	Clazz findOneById(Integer Clazzobj);
+	void endOneById(Integer clazzId);
 }

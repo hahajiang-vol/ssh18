@@ -5,12 +5,35 @@
 	
 <struts>
 	<package name="TeacherBossAction" extends="struts-default">
-		
+		<!-- 展示所有班级 -->
 		<action name="clazzAll" class="com.woniu.action.TeacherBossAction" method="clazzAll">			
-			<result>/teacherBoss22.jsp</result>
+			<result name="success">/teacherBoss22.jsp</result>
 		</action>
-		<action name="" class="com.woniu.action.TeacherBossAction" method="">			
-			<result>/teacherBossAdd.jsp</result>
+		<!-- 添加 -->
+		<action name="allTeacherAndOverman" class="com.woniu.action.TeacherBossAction" method="allTeacherAndOverman">			
+			<result name="allTeacherAndOverman">/teacherBossAdd.jsp</result>
+		</action>
+		<action name="clazzSave" class="com.woniu.action.TeacherBossAction" method="clazzSave">			
+			<result name="save" type="redirect">clazzAll.action</result>
+		</action>
+		<!-- 修改 -->
+		<action name="getOneClazzById" class="com.woniu.action.TeacherBossAction" method="getOneClazzById">			
+			<result name="getOneClazzById">/teacherBossUpdate.jsp</result>
+		</action>
+		<action name="clazzSaveUpdate" class="com.woniu.action.TeacherBossAction" method="clazzSaveUpdate">			
+			<result name="saveUpdate" type="redirect">clazzAll.action</result>
+		</action>
+		<!-- 结课 -->
+		<action name="endOneClazzById" class="com.woniu.action.TeacherBossAction" method="endOneClazzById">			
+			<result name="endOneClazzById" type="redirect">clazzAll.action</result>
+		</action>
+		<!-- 班级考勤 -->
+		<action name="clazzCheckin" class="com.woniu.action.TeacherBossAction" method="clazzCheckin">			
+			<result name="clazzCheckin">/teacherBossClazzCheckin.jsp</result>
+		</action>
+		<!-- 班级成绩 -->
+		<action name="clazzScore" class="com.woniu.action.TeacherBossAction" method="clazzScore">			
+			<result name="clazzScore">/teacherBossClazzScore.jsp</result>
 		</action>
 	</package>
 </struts>

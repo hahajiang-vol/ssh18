@@ -55,5 +55,4 @@ public class ClazzDAOImpl implements IClazzDAO {
 		Clazz clazz = (Clazz)sessionFactory.getCurrentSession().createQuery("from Clazz where clazz_id = "+ clazzid).list().get(0);
 		return clazz!=null?clazz:null;
 	}
-
 }

@@ -5,7 +5,8 @@
   Time: 14:12
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -16,17 +17,17 @@
 </head>
 <body>
 <h3><p align="center">班级管理</p></h3>
-<form class="form-horizontal" role="form">
+<form class="form-horizontal" role="form" action="clazzSave.action" method="post">
     <div class="form-group" style="margin-left: 380px; margin-top: 30px;">
         <label class="col-sm-2 control-label">班级名称</label>
         <div class="col-md-4">
-            <input type="text" class="form-control" id="cName" >
+            <input type="text" class="form-control" id="cName" name="clazz.clazzName"/>
         </div>
     </div>
     <div class="form-group" style="margin-left: 380px;">
         <label  class="col-sm-2 control-label">班级类型</label>
         <div class="col-md-4">
-            <select class="form-control">
+            <select class="form-control" name="clazz.clazzType">
                 <option>开发</option>
                 <option>测试</option>
             </select>
@@ -35,29 +36,29 @@
     <div class="form-group" style="margin-left: 380px;">
         <label  class="col-sm-2 control-label">阶段</label>
         <div class="col-md-4">
-            <select class="form-control">
-                <option>一阶段</option>
-                <option>二阶段</option>
-                <option>三阶段</option>
-                <option>四阶段</option>
-            </select>
+             <input type="text" class="form-control" id="cName" name="stage.stageId" value="1" placeholder="一阶段" disabled/>
+             
         </div>
     </div>
+   
     <div class="form-group" style="margin-left: 380px;">
         <label class="col-sm-2 control-label">教师</label>
         <div class="col-md-4">
-            <select class="form-control">
-                <option>张老师</option>
-                <option>王老师</option>
+            <select class="form-control" name="clazz.teacher.teacherId">
+            	 <c:forEach items="${teachers }" var="cc">
+                <option value="${cc.teacherId }">${cc.teacherName }</option>
+                </c:forEach>
             </select>
         </div>
     </div>
+     
     <div class="form-group" style="margin-left: 380px;">
         <label class="col-sm-2 control-label">班主任</label>
         <div class="col-md-4">
-            <select class="form-control">
-                <option>李老师</option>
-                <option>刘老师</option>
+            <select class="form-control" name="clazz.overman.overmanId">
+            <c:forEach items="${overmans }" var="cc">
+                <option value="${cc.overmanId }">${cc.overmanName }</option> 
+            </c:forEach>
             </select>
         </div>
     </div>
