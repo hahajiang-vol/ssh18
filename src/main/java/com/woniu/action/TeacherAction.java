@@ -115,10 +115,13 @@ public class TeacherAction extends ActionSupport{
 			scores = scoreService.findOneByStudentId(stu.getStudentId());
 			Double sum = 0.0;
 			for (Score score : scores) {
+				if(score.getScoreNum()==null) {
+					score.setScoreNum(0.0);
+				}
 				sum += score.getScoreNum();
 			}
 			DecimalFormat df1 = new DecimalFormat("0.00");
-			double avg = sum/scores.size();
+			double avg = sum/Math.max(1, scores.size());
 			double m = Double.parseDouble(df1.format(avg));
 
 			stuCheckIn.setScoreAvg(m);//
@@ -131,7 +134,7 @@ public class TeacherAction extends ActionSupport{
 				}
 			}
 			DecimalFormat df2 = new DecimalFormat("0.000");
-			double attendence = count/checkins.size();
+			double attendence = count/Math.max(1, checkins.size());
 			double n = Double.parseDouble(df2.format(attendence))*100;
 			stuCheckIn.setCheckInRate(n);//
 			stuCheckIns.add(stuCheckIn);
