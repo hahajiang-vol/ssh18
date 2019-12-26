@@ -1,6 +1,8 @@
 package com.woniu.service.impl;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,10 +20,10 @@ public class CheckinServiceImpl implements ICheckinservice {
 	
 	
 	@Override
-	public Checkin findOneByStudentId(Integer studentid) {
+	public List<Checkin> findAllByStudentId(Integer studentid) {
 		// TODO Auto-generated method stub
 		
-		return checkinDAO.findOneByStudentId(studentid);
+		return checkinDAO.findAllByStudentId(studentid);
 	}
 
 	@Override

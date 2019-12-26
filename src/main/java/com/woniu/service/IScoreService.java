@@ -1,11 +1,12 @@
-package com.woniu.dao;
+package com.woniu.service;
 
 import java.util.List;
 
 import com.woniu.pojo.Score;
 
-public interface IScoreDAO {
 
+public interface IScoreService {
 	List<Score> findOneByStudentId(Integer studentid);
 	void save(Score obj);
+
 }
