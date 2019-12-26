@@ -1,5 +1,7 @@
 package com.woniu.dao.impl;
 
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -15,12 +17,13 @@ public class CheckinDAOImpl implements ICheckinDAO {
 	SessionFactory sessionFactory;	
 	
 	
+	@SuppressWarnings("unchecked")
 	@Override
-	public Checkin findOneByStudentId(Integer studentid) {
+	public List<Checkin> findAllByStudentId(Integer studentid) {
 		// TODO Auto-generated method stub
-		Checkin checkin =(Checkin)sessionFactory.getCurrentSession().createQuery("from Checkin where checkIn_id = "+ studentid).list().get(0);
+		List<Checkin> checkins =sessionFactory.getCurrentSession().createQuery("from Checkin where student_id = "+ studentid).list();
 
-		return checkin!=null?checkin:null;
+		return checkins!=null?checkins:null;
 	}
 
 	@Override

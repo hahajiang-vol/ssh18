@@ -12,7 +12,7 @@
 		<nav class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid">
 		        <div class="navbar-header">
-		            <a class="navbar-brand" title="logoTitle" href="#">代课老师</a>
+		            <a class="navbar-brand" title="logoTitle" href="#">任课老师</a>
 		       </div>
 		       <div class="collapse navbar-collapse">
 		           <ul class="nav navbar-nav navbar-right">
@@ -31,11 +31,11 @@
      <div class="pageSidebar">
          <ul class="nav nav-stacked nav-pills">
              <li role="presentation">
-                 <a href="checkinFindAllByClassId.action" target="mainFrame" >班级概况</a>
+                 <a href="checkinFindAllByClassId.action" target="mainFrame" >班级学员信息</a>
              </li>
              
              <li role="presentation">
-                 <a href="#" target="mainFrame">教师管理</a>
+                 <a href="showClassStudents.action" target="mainFrame">班级测试信息</a>
              </li>
              <li class="dropdown">
                  <a class="dropdown-toggle" data-toggle="dropdown" href="nav4.html" target="mainFrame">
@@ -43,7 +43,7 @@
                  </a>
                  <ul class="dropdown-menu">
                      <li>
-                         <a href="nav1.html" target="mainFrame">修改密码</a>
+                         <a href="userPwdUpd.jsp" target="mainFrame">修改密码</a>
                      </li>
                      <li>
                          <a href="nav3.html" target="mainFrame">查看个人信息</a>

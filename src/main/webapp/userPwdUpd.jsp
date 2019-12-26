@@ -29,10 +29,8 @@
 			<tr>
 				<th class="one">确认密码：</th>
 				<th><input type="password" id="newUserPwd2">&nbsp;&nbsp;<span id="new2"></span></th>
-				
 			</tr>
 			<tr>
-				
 				<th class="one"></th>
 				<th><input type="submit" value="保存" id="btnYes">
 					<a href="student.jsp">
