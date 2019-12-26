@@ -6,5 +6,5 @@ public interface ICheckinservice {
 	
 	Checkin findOneByStudentId(Integer studentid);
 	void save(Checkin Obj);
-
+	
 }

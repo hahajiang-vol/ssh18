@@ -30,6 +30,8 @@ public class UserAction extends ActionSupport  {
 		user = userService.login(user);
 		if(user!=null) {
 			ServletActionContext.getRequest().getSession().setAttribute("loginUser", user);
+			
+			
 			Set<Relationship1> relations = user.getRelationship1s();
 			for (Relationship1 r : relations) {
 				if(r.getRole().getRoleName().equals("教学主管")) {

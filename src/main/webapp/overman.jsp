@@ -37,7 +37,7 @@
                  <a href="studentAddMany.jsp" target="mainFrame">批量添加</a>
              </li>
              <li role="presentation">
-                 <a href="#" target="mainFrame">xxxx</a>
+                 <a href="studentAll.action" target="mainFrame">考勤管理</a>
              </li>
              <li class="dropdown">
                  <a class="dropdown-toggle" data-toggle="dropdown" href="nav4.html" target="mainFrame">

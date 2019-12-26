@@ -44,7 +44,10 @@
 		      <th>${stu.studentProfessional }</th>
 		      <th>${stu.studentGraduateTime }</th>
 		      <th>${stu.clazz.clazzName }</th>
-		      <th><a href="addClass.html" class="btn btn-primary btn-xs active" role="button">转班</a></th>
+		      <th><a href="studentFindone.action?st.studentId=${stu.studentId}" class="btn btn-primary btn-xs active" role="button">转班</a>
+		     
+		      </th>
+		       
 		      
 		    </tr>
 		    </c:forEach>

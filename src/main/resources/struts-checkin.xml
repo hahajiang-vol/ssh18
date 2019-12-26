@@ -10,6 +10,10 @@
 			
 			<result>/classNowCheckIn.jsp</result>
 		</action>
+		<action name="checkinSave" class="com.woniu.action.CheckinAction" method="checkinSave">			
+			
+			<result name="checkinSave" type="redirectAction">studentAll.action</result>
+		</action>
 		</package>
 	
 	</struts>

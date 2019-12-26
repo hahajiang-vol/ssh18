@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.woniu.dao.IClazzDAO;
 import com.woniu.dao.IRelationship1DAO;
 import com.woniu.dao.IStudentDAO;
 import com.woniu.dao.IUserDAO;
 
 import com.woniu.dao.impl.UserDAOImpl;
+import com.woniu.pojo.Clazz;
 import com.woniu.pojo.Relationship1;
 import com.woniu.pojo.Role;
 import com.woniu.pojo.Student;
@@ -26,6 +28,7 @@ public class StudentServiceImpl implements IStudentService {
 	private IUserDAO us;
 	@Autowired
 	private IRelationship1DAO ir;
+	
 	@Override
 
     
@@ -80,5 +83,5 @@ public class StudentServiceImpl implements IStudentService {
 		// TODO Auto-generated method stub
 		return st.findOneByStudentId(id);
 	}
-
+	
 }

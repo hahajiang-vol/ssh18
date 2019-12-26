@@ -1,18 +1,26 @@
 package com.woniu.action;
 
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.struts2.ServletActionContext;
+import org.junit.runner.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import com.mysql.fabric.xmlrpc.base.Data;
 import com.woniu.pojo.Clazz;
 import com.woniu.pojo.Overman;
 import com.woniu.pojo.Student;
 import com.woniu.pojo.User;
 import com.woniu.service.IStudentService;
+import com.woniu.service.impl.ClazzServiceImpl;
 import com.woniu.util.StuExcel;
 
 @Controller
@@ -20,11 +28,11 @@ public class StudentAction {
 	
 	@Autowired
 	private IStudentService studentService;
-	
+	private Map<String, Object> request;
 	private Overman  sh;
 	private Student st;
 	private List<Student> sts;
-	
+	private  ClazzServiceImpl clazzz;
 	private File students;
 	private String studentsFileName;
 	
@@ -69,12 +77,36 @@ public class StudentAction {
 	
 
 	public String studentSave() {
-		
+		SimpleDateFormat sdf=new  SimpleDateFormat("yyyy-MM-dd");		  
+		  try {
+		  st.setStudentGraduateTime(sdf.parse(sdf.format(st.getStudentGraduateTime()))) ; } 
+		  catch (ParseException e) { 
+			  // TODO Auto-generated catch block
+		  e.printStackTrace(); 
+		  }
 		studentService.save(st);
 		
 		return "studentSave";
 	}
-	
+	public String studentUpdate() {
+		                                   
+		SimpleDateFormat sdf=new  SimpleDateFormat("yyyy-MM-dd");
+		  
+		  try {
+		  st.setStudentGraduateTime(sdf.parse(sdf.format(st.getStudentGraduateTime())))
+		  ; } catch (ParseException e) { // TODO Auto-generated catch block
+		  e.printStackTrace(); }
+		 
+		studentService.update(st);
+		return "studentUpdate";
+	}
+	public String studentFindone() {
+		
+		st=studentService.findOneByStudentId(st.getStudentId());
+
+		ServletActionContext.getRequest().setAttribute("student",st);
+		return "student";
+	}
 	public String studentSaveMany() {
 		
 		try {
@@ -99,8 +131,26 @@ public class StudentAction {
 		for (Clazz clazz : clazzs) {
 			
 			sts = studentService.findAllByClazzId(clazz.getClazzId());
+			ServletActionContext.getRequest().getSession().setAttribute("clazzId", clazz.getClazzId());
 		}
+		
 		return "list";
+
+	}
+	public String studentAll() {
+		User user = (User) ServletActionContext.getRequest().getSession().getAttribute("loginUser");	
+		
+		Overman teacher = user.getOverman();
+		
+		Set<Clazz> clazzs = teacher.getClazzs();
+		
+		for (Clazz clazz : clazzs) {
+			
+			sts = studentService.findAllByClazzId(clazz.getClazzId());
+			ServletActionContext.getRequest().getSession().setAttribute("clazzId", clazz.getClazzId());
+		}
+		
+		return "li";
 
 	}
 }
