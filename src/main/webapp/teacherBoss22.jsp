@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 	<head>
@@ -7,6 +7,7 @@
 		<title>showClass</title>
 		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
 		<script type="text/jscript" src="js/bootstrap.js"></script>
+		
 		<link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -27,20 +28,20 @@
 		  <c:forEach items="${clazzs }" var="cc" varStatus="i">
 		    <tr>
 		      <td>${i.count}</td>
-		      <td>${cc.clazzName}</td>
+		      <td><a href="clazzCheckin.action">${cc.clazzName}</a></td>
 		      <td>${cc.clazzType}</td>
 		      <td>${cc.stage.stageName}</td>
 		      <td>${cc.teacher.teacherName}</td>
 		      <td>${cc.overman.overmanName}</td>
 		      <td>
 
-		      	<a href="teacherBossUpdate.jsp" class="btn btn-primary btn-xs active" role="button">修改</a>
+		      	<a href="getOneClazzById.action?clazzId=${cc.clazzId }" class="btn btn-primary btn-xs active" role="button">修改</a>
 		      </td>
 		    </tr>
 		  </c:forEach>
 		    <tr>
 		      <td colspan="7">
-				  <a href="teacherBossAdd.jsp" class="btn btn-primary btn-xs active" role="button">增加班级</a>
+				  <a href="allTeacherAndOverman.action" class="btn btn-primary btn-xs active" role="button">增加班级</a>
 			  </td>
 
 		    	

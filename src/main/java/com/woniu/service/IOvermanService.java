@@ -3,9 +3,8 @@ package com.woniu.service;
 import java.util.List;
 
 import com.woniu.pojo.Overman;
-import com.woniu.pojo.Teacher;
 
-public interface ITeacherService {
+public interface IOvermanService {
 
-	List<Teacher> findAll();
+	List<Overman> findAll();
 }

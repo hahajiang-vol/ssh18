@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.woniu.dao.ITeacherDAO;
 import com.woniu.pojo.Teacher;
@@ -14,6 +15,7 @@ public class TeacherDAOImpl implements ITeacherDAO {
 	SessionFactory sessionFactory;
 	@SuppressWarnings("unchecked")
 	@Override
+	@Transactional(readOnly=true)
 	public List<Teacher> findAll() {
 		// TODO Auto-generated method stub
 		return sessionFactory.getCurrentSession().createCriteria(Teacher.class).list();

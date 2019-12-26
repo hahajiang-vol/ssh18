@@ -28,15 +28,24 @@ public class ClazzServiceImpl implements IClazzService{
 	}
 	@Override
 	public void update(Clazz clazzobj) {
-		// TODO Auto-generated method stub
+		System.out.println("===========================================");
+		System.out.println(clazzobj.getClazzId());
+		System.out.println(clazzobj.getClazzName());
+		System.out.println(clazzobj.getClazzType());
+		System.out.println(clazzobj.getOverman().getOvermanId());
+		System.out.println(clazzobj.getStage().getStageId());
+		System.out.println(clazzobj.getTeacher().getTeacherId());
 		Clazz temp = clazzdao.findOneById(clazzobj.getClazzId());
 		temp.setTeacher(clazzobj.getTeacher());
 		temp.setStage(clazzobj.getStage());
+		System.out.println(temp);
 		clazzdao.update(temp);
+		
 	}
 	@Override
 	public Clazz findOneById(Integer clazzobj) {
 		// TODO Auto-generated method stub
 		return clazzdao.findOneById(clazzobj);
 	}
+	
 }

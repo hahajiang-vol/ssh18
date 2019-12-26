@@ -17,7 +17,7 @@
 		       <div class="collapse navbar-collapse">
 		           <ul class="nav navbar-nav navbar-right">
 		               <li role="presentation">
-		                   <a href="#">当前用户：<span class="badge">xxx</span></a>
+		                   <a href="#">当前用户：<span class="badge">admin</span></a>
 		               </li>
 		               <li>
 		                   <a href="#">
@@ -34,10 +34,10 @@
                  <a href="clazzAll.action" target="mainFrame" >班级管理</a>
              </li>
              <li role="presentation">
-                 <a href="#" target="mainFrame">班主任管理</a>
+                 <a href="clazzScore.action" target="mainFrame">班级成绩</a>
              </li>
              <li role="presentation">
-                 <a href="#" target="mainFrame">教师管理</a>
+                 <a href="teacherBossClazzCheckin.jsp" target="mainFrame">班级考勤</a>
              </li>
              <li class="dropdown">
                  <a class="dropdown-toggle" data-toggle="dropdown" href="nav4.html" target="mainFrame">
@@ -45,7 +45,7 @@
                  </a>
                  <ul class="dropdown-menu">
                      <li>
-                         <a href="nav1.html" target="mainFrame">修改密码</a>
+                         <a href="userPwdUpd.jsp" target="mainFrame">修改密码</a>
                      </li>
                      <li>
                          <a href="nav3.html" target="mainFrame">查看个人信息</a>
@@ -59,7 +59,7 @@
      </div>
     <div class="splitter"></div>
         <div class="pageContent">
-            <iframe src="welcome.jsp" id="mainFrame" name="mainFrame"
+            <iframe src="clazzAll.action" id="mainFrame" name="mainFrame"
                     frameborder="0" width="100%"  height="100%" frameBorder="0">
             </iframe>
         </div>
