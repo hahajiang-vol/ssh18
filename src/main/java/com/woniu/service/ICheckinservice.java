@@ -8,5 +8,5 @@ public interface ICheckinservice {
 	
 	List<Checkin> findAllByStudentId(Integer studentid);
 	void save(Checkin Obj);
-
+	
 }

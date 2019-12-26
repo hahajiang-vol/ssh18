@@ -17,10 +17,10 @@
 		       <div class="collapse navbar-collapse">
 		           <ul class="nav navbar-nav navbar-right">
 		               <li role="presentation">
-		                   <a href="#">当前用户：<span class="badge">xxx</span></a>
+		                   <a href="#">当前用户：<span class="badge">${sessionScope.loginUser.userName }</span></a>
 		               </li>
 		               <li>
-		                   <a href="#">
+		                   <a href="exit.action">
 		                         <span class="glyphicon glyphicon-lock"></span>退出登录</a>
 		                </li>
 		            </ul>
@@ -37,7 +37,7 @@
                  <a href="studentAddMany.jsp" target="mainFrame">批量添加</a>
              </li>
              <li role="presentation">
-                 <a href="#" target="mainFrame">xxxx</a>
+                 <a href="studentAll.action" target="mainFrame">考勤管理</a>
              </li>
              <li class="dropdown">
                  <a class="dropdown-toggle" data-toggle="dropdown" href="nav4.html" target="mainFrame">
@@ -60,7 +60,7 @@
 
      <div class="splitter"></div>
      <div class="pageContent">
-       <iframe src="welcome.jsp" id="mainFrame" name="mainFrame" 
+       <iframe src="studentFindAll.action" id="mainFrame" name="mainFrame" 
        	frameborder="0" width="100%"  height="100%" frameBorder="0">
        </iframe> 
      </div>

@@ -11,6 +11,7 @@ import com.woniu.pojo.Relationship1;
 import com.woniu.pojo.User;
 import com.woniu.service.IUserService;
 
+@SuppressWarnings("serial")
 @Controller
 public class UserAction extends ActionSupport  {
 
@@ -30,6 +31,8 @@ public class UserAction extends ActionSupport  {
 		user = userService.login(user);
 		if(user!=null) {
 			ServletActionContext.getRequest().getSession().setAttribute("loginUser", user);
+			
+			
 			Set<Relationship1> relations = user.getRelationship1s();
 			for (Relationship1 r : relations) {
 				if(r.getRole().getRoleName().equals("教学主管")) {
@@ -60,5 +63,11 @@ public class UserAction extends ActionSupport  {
 		userService.update(user);
 		
 		return "login";
+	}
+	public String exit() {
+		ServletActionContext.getRequest().getSession().removeAttribute("loginUser");
+		ServletActionContext.getRequest().getSession().invalidate();
+		
+		return SUCCESS;
 	}
 }

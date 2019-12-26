@@ -15,11 +15,16 @@
 				 <result name="studentSave" type="redirectAction">studentFindAll.action</result> 
 			</action> 
 			
-			 <!-- <action name="studentUpdate" class="com.woniu.action.StudentAction" method="studentUpdate">
-				
-			</action> -->
+			<action name="studentUpdate" class="com.woniu.action.StudentAction" method="studentUpdate">
+				 <result name="studentUpdate" type="redirectAction">studentFindAll.action</result> 
+			</action>
+			<action name="studentFindone" class="com.woniu.action.StudentAction" method="studentFindone">
+				<result  name="student">/studentUpd.jsp</result>
+			</action>
 			
-			
+			<action name="studentAll" class="com.woniu.action.StudentAction" method="studentAll">
+				<result  name="li">/cheCkinAdd.jsp</result>
+			</action>
 			<action name="studentFindAll" class="com.woniu.action.StudentAction" method="studentFindAll">
 				<result  name="list">/studentAll.jsp</result>
 			</action>

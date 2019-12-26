@@ -20,7 +20,7 @@
 		                   <a href="#">当前用户：<span class="badge">${loginUser.userName }</span></a>
 		               </li>
 		               <li>
-		                   <a href="login.jsp">
+		                   <a href="exit.action">
 		                         <span class="glyphicon glyphicon-lock"></span>退出登录</a>
 		                </li>
 		            </ul>

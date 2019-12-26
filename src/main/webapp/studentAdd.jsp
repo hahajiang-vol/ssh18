@@ -75,16 +75,18 @@
 			
 			</div>
 		</div>
+		<div class="form-group">
+			<label class="col-md-5 col-sm-5 control-label">毕业时间:</label>
+			<div class="col-md-3 " >				
+			   <input type="date" class="form-control" required="required"  name="st.studentGraduateTime" >
+			  	 
+			</div>
+		</div>
 		  <div class="form-group">
 			<label class="col-md-5 col-sm-5 control-label">所属班级：</label>
-			<div class="col-md-3 ">				
-			   
-			  	 <select name="st.clazz.clazzId" class="form-control">
-				 	<option>请选择</option>
-				 	<option>1</option>
-				 	<option>2</option>
-				 	
-				 </select>
+			<div class="col-md-3 " >				
+			   <input type="text" class="form-control" value="${sessionScope.clazzId}" readonly="readonly" name="st.clazz.clazzId" >
+			  	 
 			</div>
 		</div>
          

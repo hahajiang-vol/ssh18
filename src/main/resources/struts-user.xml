@@ -5,6 +5,8 @@
 	
 <struts>
 	<package name="user" extends="struts-default">
+	
+		<!-- 登陆 -->
 		<action name="login" class="com.woniu.action.UserAction" method="login">
 			
 			<!-- 返回到学生主界面 -->
@@ -26,6 +28,11 @@
 		<action name="save" class="com.woniu.action.UserAction" method="save">
 			<result name="login">/login.jsp</result>
 			<result type="redirect">/index.jsp</result>
+		</action>
+		
+		<!-- 退出 -->
+		<action name="exit" class="com.woniu.action.UserAction" method="save">
+			<result type="redirect">/login.jsp</result>
 		</action>
 		
 		<!-- 修改个人密码 -->
