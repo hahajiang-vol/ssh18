@@ -36,5 +36,6 @@
 		</action>
 		
 		</package>
-	
+		
+		<constant name="struts.multipart.saveDir" value="/tmp"></constant>
 	</struts>

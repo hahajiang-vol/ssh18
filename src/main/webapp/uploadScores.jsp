@@ -18,8 +18,15 @@
 			<label class="col-md-5 col-sm-5 control-label" >Excel成绩表单：</label>
 			<div class="col-md-3 ">
 			
-			   <input type="file"  name="scores" >
+			   <input type="file" class="form-control" required="required" name="scoreFile" >
 			
+			</div>
+		</div>
+		<div class="form-group" >
+			<label class="col-md-5 col-sm-5 control-label" >上传格式示例：</label>
+			
+			<div class="col-md-3">
+				<img alt="上传格式"  src="img/upload.png"/>		
 			</div>
 		</div>
 		
