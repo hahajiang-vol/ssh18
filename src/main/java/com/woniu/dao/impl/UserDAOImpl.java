@@ -1,5 +1,7 @@
 package com.woniu.dao.impl;
 
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -30,8 +32,8 @@ public class UserDAOImpl implements IUserDAO {
 	public User findOneByUserName(String username) {
 		// TODO Auto-generated method stub
 		
-		User user =(User)sessionFactory.getCurrentSession().createQuery("from User where user_name = '" + username+"'").list().get(0);
-		return user!=null?user:null;
+		List<User> users = sessionFactory.getCurrentSession().createQuery("from User where user_name = '" + username+"'").list();
+		return users.size()!=0?users.get(0):null;
 	}
 
 }

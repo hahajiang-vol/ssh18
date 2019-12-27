@@ -54,10 +54,6 @@ public class Checkin implements java.io.Serializable {
 		this.checkInDate = checkInDate;
 	}
 
-	@Override
-	public String toString() {
-		return "Checkin [checkInId=" + checkInId + ", checkintype=" + checkintype + ", student=" + student
-				+ ", checkInDate=" + checkInDate + "]";
-	}
+	
 
 }

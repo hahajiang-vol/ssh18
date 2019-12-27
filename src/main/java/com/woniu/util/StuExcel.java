@@ -105,6 +105,7 @@ public class StuExcel {
 		//设置学生电话
 		cell = row.getCell(cellNum++);
 		if(cell!=null) {
+			cell.setCellType(Cell.CELL_TYPE_STRING);
 			student.setStudentPhone(fe.evaluate(cell).getStringValue());
 		}
 		//设置学生住址
@@ -127,7 +128,7 @@ public class StuExcel {
 		if(cell!=null) {
 			student.setStudentProfessional(fe.evaluate(cell).getStringValue());
 		}
-		//设置学生专业
+		//设置学生毕业时间
 		cell = row.getCell(cellNum++);
 		if(cell!=null) {
 			student.setStudentGraduateTime(cell.getDateCellValue());

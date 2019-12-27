@@ -45,10 +45,6 @@ public class Checkintype implements java.io.Serializable {
 		this.checkins = checkins;
 	}
 
-	@Override
-	public String toString() {
-		return "Checkintype [checkInTypeId=" + checkInTypeId + ", checkInTypeName=" + checkInTypeName + ", checkins="
-				+ checkins + "]";
-	}
+	
 
 }
