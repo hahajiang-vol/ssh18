@@ -36,9 +36,7 @@
 		</action>
 		
 		<!-- 修改个人密码 -->
-		<action name="userPwdSave" class="com.woniu.action.UserAction" method="userPwdSave">
-			<!-- 修改成功后跳至登录界面 -->
-			<result name="login" type="redirect">/login.jsp</result>	
+		<action name="userPwdSave" class="com.woniu.action.UserAction" method="userPwdSave">	
 		</action>
 	</package>
 </struts>

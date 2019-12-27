@@ -1,5 +1,7 @@
 package com.woniu.action;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Set;
 
 import org.apache.struts2.ServletActionContext;
@@ -55,14 +57,28 @@ public class UserAction extends ActionSupport  {
 		return SUCCESS;
 	}
 	
-	public String userPwdSave() {
+	public void userPwdSave() {
 		user = (User) ServletActionContext.getRequest().getSession().getAttribute("loginUser");
-		
-		user.setUserPwd(ServletActionContext.getRequest().getParameter("newUserPwd"));
-		
-		userService.update(user);
-		
-		return "login";
+		String userPwd0 = user.getUserPwd();
+		String oldUserPwd = ServletActionContext.getRequest().getParameter("oldUserPwd");
+		PrintWriter out = null;
+		try {
+			out = ServletActionContext.getResponse().getWriter();
+			if (userPwd0.equals(oldUserPwd)) {
+				user.setUserPwd(ServletActionContext.getRequest().getParameter("newUserPwd"));
+				userService.update(user);
+				out.print("true");
+			}else {
+				out.print("false");
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			out.flush();
+			out.close();
+		}
 	}
 	public String exit() {
 		ServletActionContext.getRequest().getSession().removeAttribute("loginUser");
