@@ -127,7 +127,9 @@ public class TeacherAction extends ActionSupport{
 			students = clazz.getStudents();
 		}
 		
-		System.out.println(students);
+		if(students==null) {
+			return SUCCESS;
+		}
 		for(Student stu:students) {
 			StudentCheckIn stuCheckIn = new StudentCheckIn();
 			stuCheckIn.setStudentId(stu.getStudentId());//
@@ -190,8 +192,8 @@ public class TeacherAction extends ActionSupport{
 	
 	public String showClassStudents() {
 		Teacher teacher = ((User)ServletActionContext.getRequest().getSession().getAttribute("loginUser")).getTeacher();
-
-		if(teacher.getClazzs().iterator()!=null) {
+		
+		if(teacher.getClazzs().iterator()!=null && teacher.getClazzs().iterator().hasNext()) {
 			Clazz clazz = (Clazz)teacher.getClazzs().iterator().next();
 			Integer clazzid = clazz.getClazzId();
 			students = studentService.findAllByClazzId(clazzid);
