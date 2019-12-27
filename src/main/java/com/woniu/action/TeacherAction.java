@@ -1,6 +1,7 @@
 package com.woniu.action;
 
 
+import java.io.File;
 import java.text.DecimalFormat;
 //import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ import com.woniu.povo.StudentCheckIn;
 import com.woniu.service.ICheckinservice;
 import com.woniu.service.IScoreService;
 import com.woniu.service.IStudentService;
+import com.woniu.util.ScoreExcel;
 
 @SuppressWarnings("serial")
 @Controller
@@ -42,6 +44,28 @@ public class TeacherAction extends ActionSupport{
 	private List<Score> scores;
 	private Score score;
 	private Student student;
+	
+	
+	private File scoreFile;
+	private String scoreFileFileName;
+	
+	public String getScoreFileFileName() {
+		return scoreFileFileName;
+	}
+
+	public void setScoreFileFileName(String scoreFileFileName) {
+		this.scoreFileFileName = scoreFileFileName;
+	}
+
+	public File getScoreFile() {
+		return scoreFile;
+	}
+
+	public void setScoreFile(File scoreFile) {
+		this.scoreFile = scoreFile;
+	}
+
+	
 	
 	public Student getStudent() {
 		return student;
@@ -185,8 +209,16 @@ public class TeacherAction extends ActionSupport{
 		return SUCCESS;
 	}
 	public String uploadScores() {
-		
-		
+		try {
+			scores = ScoreExcel.readExcel(scoreFile);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for (Score sc : scores) {
+			scoreService.save(sc);
+		}
 		return SUCCESS;
 	}
 	
